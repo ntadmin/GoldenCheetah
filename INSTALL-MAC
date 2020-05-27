@@ -105,7 +105,9 @@ build a release you need to checkout the code at the tag for the release.
 
 A list of releases can be found at: https://github.com/GoldenCheetah/GoldenCheetah/tags
 
-$ git checkout V3.3-RC1
+NT: updated the next line to the most recent dev that I am aware of:
+
+$ git checkout V3.6-DEV2005
 $ ls
 
 You will now see an updated version of this walkthrough, please jump to using
@@ -160,6 +162,16 @@ with the following commands:
 $ sudo port install qt4-mac
 $ sudo port install qt4-mac-sqlite3-plugin
 
+NT notes:
+
+$ sudo port install qt4-qtmacextras
+$ sudo port install qt4-qtwebengine
+$ sudo port install qt4-qtconnectivity
+
+NT adds: 
+And get the qmake link in place for the macports qt5 install:
+$ sudo ln -s /usr/local/libexec/qt5/bin/qmake /usr/local/bin/qmake
+
 1.6 DEPRECATED
 --------------
 
@@ -183,6 +195,8 @@ In that last step you can use whatever editor you feel most comfortable with.
 For now we will comment out some of the dependencies we have not installed
 support for yet:
 
+NT: these are comment out by default
+
 #SRMIO_INSTALL = /usr/local/srmio
 #D2XX_INCLUDE = /usr/local/include/D2XX
 
@@ -194,6 +208,10 @@ LIBS += -lz
 Lastly, since we are on Lion, we can also uncomment and change the following line:
 
 DEFINES += GC_HAVE_LION
+
+NT: actually, using latest qt5, you need to uncomment the NOWEBKIT loine as well:
+
+DEFINE += NOWEBKIT
 
 Once the changes have been made we are now ready to build for the first time. You
 may notice a lot of warning messages about the version of O/S not being supported.
