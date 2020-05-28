@@ -213,6 +213,11 @@ NT: actually, using latest qt5, you need to uncomment the NOWEBKIT loine as well
 
 DEFINE += NOWEBKIT
 
+NT: and if you want to get data from Strava:
+# For private Stava access debugging (correct for your ID and secret
+DEFINES += GC_STRAVA_CLIENT_ID=\\\"48782\\\"
+DEFINES += GC_STRAVA_CLIENT_SECRET=\\\"52c2d7ec589a6f6a6bc45644b84058d003868473\\\"
+
 Once the changes have been made we are now ready to build for the first time. You
 may notice a lot of warning messages about the version of O/S not being supported.
 This is because QT does not officially support Lion at this point in time (but it
