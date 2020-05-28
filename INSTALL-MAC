@@ -107,7 +107,7 @@ A list of releases can be found at: https://github.com/GoldenCheetah/GoldenCheet
 
 NT: updated the next line to the most recent dev that I am aware of:
 
-$ git checkout V3.6-DEV2005
+$ git checkout v3.6-DEV2005
 $ ls
 
 You will now see an updated version of this walkthrough, please jump to using
