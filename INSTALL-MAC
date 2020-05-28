@@ -254,7 +254,7 @@ And you're up and running.
 
 Now, if you would like to use XCode to debug the project, you can generate 
 the necessary project file. 
-$ qmake --recursive -spec macx-xcode
+$ qmake -recursive -spec macx-xcode
 
 This will create a project as: build.xcodeproj Please be sure to build via 
 the standard method before checkin to prevent build errors. If the build
